@@ -1,6 +1,10 @@
 # WoW Renovate Data Source
 
-A data source for [Renovate](https://docs.renovatebot.com/) to track World of Warcraft interface versions. This allows automated dependency updates for WoW addon TOC files.
+
+![](./docs/wow_renovate_data.png)
+![](docs/license_badge.svg)
+
+> A data source for [Renovate](https://docs.renovatebot.com/) to track World of Warcraft interface versions. This allows automated dependency updates for WoW addon TOC files.
 
 ## Features
 
