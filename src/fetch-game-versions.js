@@ -8,7 +8,7 @@ function printSummary(gameVersions) {
   Object.values(gameVersions).forEach(v => {
     variantCounts[v.variant] = (variantCounts[v.variant] || 0) + 1;
   });
-  
+
   console.log('\nSummary:');
   console.log(`Total gameVersion IDs: ${Object.keys(gameVersions).length}`);
   Object.entries(variantCounts).forEach(([variant, count]) => {
@@ -16,27 +16,83 @@ function printSummary(gameVersions) {
   });
 }
 
+// Helper function to parse version strings like "1.15.3" into comparable numbers
+function parseVersion(versionString) {
+  const parts = versionString.split('.');
+  // Convert to a single number for easy comparison: major*10000 + minor*100 + patch
+  const major = parseInt(parts[0] || '0', 10);
+  const minor = parseInt(parts[1] || '0', 10);
+  const patch = parseInt(parts[2] || '0', 10);
+  return major * 10000 + minor * 100 + patch;
+}
+
 async function saveGameVersionsToFile(gameVersions) {
-  // Create a Renovate-friendly datasource format with all variants in one file
-  const releases = [];
-  
+  // First, organize all versions by variant
+  const versionsByVariant = {};
+
   Object.entries(gameVersions).forEach(([versionName, data]) => {
-    releases.push({
+    if (!versionsByVariant[data.variant]) {
+      versionsByVariant[data.variant] = [];
+    }
+    versionsByVariant[data.variant].push({
       version: versionName,
-      variant: data.variant,
       gameVersionId: data.id,
-      releaseTimestamp: new Date().toISOString()
+      sortOrder: parseVersion(versionName)
     });
   });
-  
+
+  // Sort each variant's versions by sortOrder (newest first)
+  Object.values(versionsByVariant).forEach(versions => {
+    versions.sort((a, b) => b.sortOrder - a.sortOrder);
+  });
+
+  // Create releases for Renovate datasource
+  const renovateReleases = [];
+
+  // Process each variant
+  Object.entries(versionsByVariant).forEach(([variant, versions]) => {
+    // For each version in this variant, create a release
+    versions.forEach((versionData, index) => {
+      renovateReleases.push({
+        // Use gameVersionId as the version (what Renovate will use)
+        version: String(versionData.gameVersionId),
+        // Keep the original version for reference
+        originalVersion: versionData.version,
+        variant: variant,
+        // Create a timestamp that ensures proper ordering
+        // Most recent versions get the most recent timestamp
+        releaseTimestamp: new Date(Date.now() - (versions.length - index - 1) * 86400000).toISOString()
+      });
+    });
+  });
+
   const datasource = {
     lastUpdated: new Date().toISOString(),
-    releases: releases
+    releases: renovateReleases
   };
-  
+
   const outputPath = path.join(__dirname, '..', 'game-versions.json');
   await fs.writeFile(outputPath, JSON.stringify(datasource, null, 2));
   console.log(`Saved game versions to ${outputPath}`);
+
+  // Also save a mapping file for debugging/reference
+  const mappingData = {
+    lastUpdated: new Date().toISOString(),
+    mappings: Object.entries(gameVersions).map(([version, data]) => ({
+      version: version,
+      gameVersionId: data.id,
+      variant: data.variant
+    })).sort((a, b) => {
+      if (a.variant !== b.variant) {
+        return a.variant.localeCompare(b.variant);
+      }
+      return parseVersion(b.version) - parseVersion(a.version);
+    })
+  };
+
+  const mappingPath = path.join(__dirname, '..', 'game-versions-mapping.json');
+  await fs.writeFile(mappingPath, JSON.stringify(mappingData, null, 2));
+  console.log(`Saved version mappings to ${mappingPath}`);
 }
 
 async function readExistingGameVersions() {
@@ -52,32 +108,33 @@ async function readExistingGameVersions() {
 
 function hasGameVersionsChanged(oldData, gameVersions) {
   if (!oldData || !oldData.releases) return true;
-  
+
   // Create a map of existing versions for comparison
   const oldVersionsMap = {};
   oldData.releases.forEach(release => {
+    // Map by gameVersionId since that's what we're using as version now
     oldVersionsMap[release.version] = {
-      variant: release.variant,
-      gameVersionId: release.gameVersionId
+      originalVersion: release.originalVersion,
+      variant: release.variant
     };
   });
-  
+
   // Compare with new data
   const newVersionsMap = {};
   Object.entries(gameVersions).forEach(([version, data]) => {
-    newVersionsMap[version] = {
-      variant: data.variant,
-      gameVersionId: data.id
+    newVersionsMap[String(data.id)] = {
+      originalVersion: version,
+      variant: data.variant
     };
   });
-  
+
   return JSON.stringify(oldVersionsMap) !== JSON.stringify(newVersionsMap);
 }
 
 function processGameVersionData(data, versionTypeMap) {
   // Transform the API response into our format
   const gameVersions = {};
-  
+
   // The API returns an array of game versions
   if (Array.isArray(data)) {
     data.forEach(version => {
@@ -85,7 +142,7 @@ function processGameVersionData(data, versionTypeMap) {
         // Map the gameVersionTypeID to variant using the versionTypeMap
         const versionType = versionTypeMap[version.gameVersionTypeID];
         const variant = versionType ? versionType.variant : 'unknown';
-        
+
         gameVersions[version.name] = {
           id: version.id,
           variant: variant
@@ -93,7 +150,7 @@ function processGameVersionData(data, versionTypeMap) {
       }
     });
   }
-  
+
   return gameVersions;
 }
 
@@ -117,23 +174,23 @@ async function fetchAndSaveGameVersions() {
   try {
     console.log('Fetching game version IDs from CurseForge Upload API...');
     const gameVersionData = await client.getGameVersionIds();
-    
+
     // Get the version type mappings from the client
     const versionTypeMap = client.getVersionTypes();
-    
+
     console.log('Processing game version IDs...');
     const gameVersions = processGameVersionData(gameVersionData, versionTypeMap);
-    
+
     if (Object.keys(gameVersions).length === 0) {
       console.error('No game version IDs found in the API response');
       process.exit(1);
     }
-    
+
     console.log(`Found ${Object.keys(gameVersions).length} game version IDs`);
 
     // Read existing data to check for changes
     const existingData = await readExistingGameVersions();
-    
+
     // Only update if versions have actually changed
     if (existingData && !hasGameVersionsChanged(existingData, gameVersions)) {
       console.log('No changes detected, keeping existing file');
