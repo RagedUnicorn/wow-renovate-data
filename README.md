@@ -41,7 +41,7 @@ Add this configuration to your addon project's `renovate.json`:
 {
   "customDatasources": {
     "wow-interface": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/YOUR_USERNAME/wow-renovate-data/main/versions.json",
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/versions.json",
       "transformTemplates": [
         "{\"releases\": $.versions.map(v => ({\"version\": v.version, \"releaseTimestamp\": $.lastUpdated}))}"
       ]
