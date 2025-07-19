@@ -27,6 +27,27 @@ async function saveVersionsToFile(output) {
   console.log(`Saved versions to ${outputPath}`);
 }
 
+async function readExistingVersions() {
+  const outputPath = path.join(__dirname, '..', 'versions.json');
+  try {
+    const content = await fs.readFile(outputPath, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    // File doesn't exist or is invalid
+    return null;
+  }
+}
+
+function hasVersionsChanged(oldData, newData) {
+  if (!oldData) return true;
+  
+  // Compare versions array (excluding lastUpdated)
+  const oldVersions = JSON.stringify(oldData.versions);
+  const newVersions = JSON.stringify(newData.versions);
+  
+  return oldVersions !== newVersions;
+}
+
 function createOutputObject(parsedVersions, versionsByVariant, versionTypes) {
   return {
     lastUpdated: new Date().toISOString(),
@@ -96,7 +117,16 @@ async function fetchAndSaveVersions() {
     // Get version types from client (hardcoded mappings)
     const versionTypes = client.getVersionTypes();
 
+    // Read existing versions to check for changes
+    const existingData = await readExistingVersions();
+    
     const output = createOutputObject(parsedVersions, versionsByVariant, versionTypes);
+    
+    // Only update lastUpdated if versions have actually changed
+    if (existingData && !hasVersionsChanged(existingData, output)) {
+      output.lastUpdated = existingData.lastUpdated;
+      console.log('No version changes detected, keeping existing lastUpdated timestamp');
+    }
 
     // Save to versions.json
     await saveVersionsToFile(output);
