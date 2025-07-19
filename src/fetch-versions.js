@@ -40,11 +40,11 @@ async function readExistingVersions() {
 
 function hasVersionsChanged(oldData, newData) {
   if (!oldData) return true;
-  
+
   // Compare versions array (excluding lastUpdated)
   const oldVersions = JSON.stringify(oldData.versions);
   const newVersions = JSON.stringify(newData.versions);
-  
+
   return oldVersions !== newVersions;
 }
 
@@ -119,9 +119,9 @@ async function fetchAndSaveVersions() {
 
     // Read existing versions to check for changes
     const existingData = await readExistingVersions();
-    
+
     const output = createOutputObject(parsedVersions, versionsByVariant, versionTypes);
-    
+
     // Only update lastUpdated if versions have actually changed
     if (existingData && !hasVersionsChanged(existingData, output)) {
       output.lastUpdated = existingData.lastUpdated;

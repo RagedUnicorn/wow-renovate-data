@@ -4,8 +4,10 @@
   "description": "A data source for Renovate to track World of Warcraft interface versions",
   "main": "src/index.js",
   "scripts": {
-    "fetch": "node src/fetch-versions.js",
-    "fetch:debug": "node --inspect-brk src/fetch-versions.js",
+    "fetch-wow-versions": "node src/fetch-versions.js",
+    "fetch-wow-versions:debug": "node --inspect-brk src/fetch-versions.js",
+    "fetch-game-versions": "node src/fetch-game-versions.js",
+    "fetch-game-versions:debug": "node --inspect-brk src/fetch-game-versions.js",
     "test": "jest",
     "lint": "eslint src/"
   },

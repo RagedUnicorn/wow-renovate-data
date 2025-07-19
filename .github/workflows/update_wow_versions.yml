@@ -25,7 +25,7 @@ jobs:
     - name: Fetch latest versions
       env:
         CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-      run: npm run fetch
+      run: npm run fetch-wow-versions
     - name: Check for changes
       id: changes
       run: |

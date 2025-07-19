@@ -1,10 +1,12 @@
 const axios = require('axios');
+const packageInfo = require('../package.json');
 
 class CurseForgeClient {
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.baseUrl = 'https://api.curseforge.com/v1';
     this.wowGameId = 1;
+    this.userAgent = `${packageInfo.name}/${packageInfo.version}`;
 
     // Hardcoded mappings based on known gameVersionTypeIds
     this.versionTypeMap = {
@@ -24,7 +26,8 @@ class CurseForgeClient {
         {
           headers: {
             'Accept': 'application/json',
-            'x-api-key': this.apiKey
+            'x-api-key': this.apiKey,
+            'User-Agent': this.userAgent
           }
         }
       );
@@ -70,6 +73,25 @@ class CurseForgeClient {
   getVersionTypes() {
     // Return our hardcoded version type mappings
     return this.versionTypeMap;
+  }
+
+  async getGameVersionIds() {
+    try {
+      const response = await axios.get(
+        `https://wow.curseforge.com/api/game/versions?token=${this.apiKey}`,
+        {
+          headers: {
+            'Accept': 'application/json',
+            'User-Agent': this.userAgent
+          },
+          timeout: 5000
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching game version IDs:', error.message);
+      throw error;
+    }
   }
 }
 

@@ -2,9 +2,11 @@
 
 
 ![](./docs/wow_renovate_data.png)
+[![Update WoW Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml)
+[![Update Game Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml)
 ![](docs/license_badge.svg)
 
-> A data source for [Renovate](https://docs.renovatebot.com/) to track World of Warcraft interface versions. This allows automated dependency updates for WoW addon TOC files.
+> A data source for [Renovate](https://docs.renovatebot.com/) to track World of Warcraft interface versions. This allows automated dependency updates for WoW addon TOC and other similar files.
 
 ## Features
 
@@ -31,19 +33,22 @@
 
 1. Fork this repository
 2. Add your CurseForge API key as a GitHub secret named `CURSEFORGE_API_KEY`
-3. The GitHub Action will run every 6 hours to check for new versions
+3. The GitHub Actions will run every 6 hours to check for new versions (both WoW interface versions and game version IDs)
 
 ### 3. Configure Renovate in Your Addon Project
 
 Add this configuration to your addon project's `renovate.json`:
 
+#### For TOC files (tracking interface versions):
+
 ```json
 {
   "customDatasources": {
-    "wow-interface": {
+    "wow-versions": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/versions.json",
+      "format": "json",
       "transformTemplates": [
-        "{\"releases\": $.versions.map(v => ({\"version\": v.version, \"releaseTimestamp\": $.lastUpdated}))}"
+        "{ \"releases\": $.versions[variant = 'classic_era'].{ \"version\": version } }"
       ]
     }
   },
@@ -55,13 +60,73 @@ Add this configuration to your addon project's `renovate.json`:
       "matchStrings": [
         "## Interface:\\s*(?<currentValue>\\d+)"
       ],
-      "datasourceTemplate": "custom.wow-interface",
-      "depNameTemplate": "wow-interface",
-      "versioningTemplate": "regex:^(?<major>\\d)(?<minor>\\d{2})(?<patch>\\d{2})$"
+      "datasourceTemplate": "custom.wow-versions",
+      "depNameTemplate": "wow-interface"
     }
   ]
 }
 ```
+
+#### For pom.xml files (tracking both interface and patch versions):
+
+```json
+{
+  "customDatasources": {
+    "wow-versions": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/versions.json",
+      "format": "json",
+      "transformTemplates": [
+        "{ \"releases\": $.versions[variant = 'classic_era'].{ \"version\": version } }"
+      ]
+    },
+    "wow-patch-versions": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/versions.json",
+      "format": "json",
+      "transformTemplates": [
+        "{ \"releases\": $.versions[variant = 'classic_era'].{ \"version\": name } }"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^pom\\.xml$"],
+      "matchStrings": [
+        "<!-- renovate: datasource=custom.wow-versions depName=wow-interface versioning=loose -->\\n\\s*<addon\\.interface>(?<currentValue>\\d+)</addon\\.interface>"
+      ],
+      "datasourceTemplate": "custom.wow-versions",
+      "depNameTemplate": "wow-interface"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^pom\\.xml$"],
+      "matchStrings": [
+        "<!-- renovate: datasource=custom.wow-patch-versions depName=wow-patch versioning=loose -->\\n\\s*<addon\\.supported\\.patch>(?<currentValue>[\\d\\.]+)</addon\\.supported\\.patch>"
+      ],
+      "datasourceTemplate": "custom.wow-patch-versions",
+      "depNameTemplate": "wow-patch"
+    }
+  ]
+}
+```
+
+Then in your `pom.xml`:
+
+```xml
+<!-- renovate: datasource=custom.wow-versions depName=wow-interface versioning=loose -->
+<addon.interface>11507</addon.interface>
+
+<!-- renovate: datasource=custom.wow-patch-versions depName=wow-patch versioning=loose -->
+<addon.supported.patch>1.15.7</addon.supported.patch>
+```
+
+**Note**: You can filter by variant in the transformTemplates. Available variants are:
+- `retail` - Current retail version
+- `classic_era` - Classic Era (Vanilla)
+- `tbc_classic` - The Burning Crusade Classic
+- `wotlk_classic` - Wrath of the Lich King Classic
+- `cata_classic` - Cataclysm Classic
+- `mop_classic` - Mists of Pandaria Classic
 
 ## How It Works
 
@@ -69,7 +134,7 @@ Add this configuration to your addon project's `renovate.json`:
 2. The version parser filters and extracts WoW versions
 3. Interface version numbers are calculated from version strings (e.g., "1.15.3" → "11503")
 4. Results are saved to `versions.json` for Renovate to consume
-5. GitHub Actions runs periodically to keep the data up-to-date
+5. GitHub Actions run periodically to keep the data up-to-date
 
 ## Manual Usage
 
@@ -82,8 +147,15 @@ npm install
 # Create .env file with your API key
 echo "CURSEFORGE_API_KEY=your-key-here" > .env
 
-# Fetch latest versions
-npm run fetch
+# Fetch latest WoW interface versions
+npm run fetch-wow-versions
+
+# Fetch latest WoW game versions
+npm run fetch-game-versions
+
+# Debug scripts (for development)
+npm run fetch-wow-versions:debug
+npm run fetch-game-versions:debug
 ```
 
 ## Version Format
@@ -91,6 +163,60 @@ npm run fetch
 WoW interface versions follow this pattern:
 - Major version (1 digit) + Minor version (2 digits) + Patch version (2 digits)
 - Example: Version 1.15.3 becomes Interface 11503
+
+## CurseForge Game Version IDs
+
+CurseForge gameVersion IDs (needed for uploading addons) are maintained in `game-versions.json`.
+
+```bash
+# Generate game-versions.json
+npm run fetch-game-versions
+```
+
+The script fetches gameVersion IDs from the CurseForge WoW API (`wow.curseforge.com/api/game/versions`). It automatically maps each version to its correct variant (retail, classic_era, tbc_classic, etc.) and generates a `game-versions.json` file in Renovate-compatible datasource format.
+
+### Tracking GameVersion IDs with Renovate
+
+The `game-versions.json` file can be used with Renovate to track gameVersion IDs. You can filter by variant using JSONPath.
+
+To automatically update gameVersion IDs when new WoW patches are released, add this to your `renovate.json`:
+
+```json
+{
+  "customDatasources": {
+    "wow-game-versions-classic": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/game-versions.json",
+      "transformTemplates": [
+        "{\"releases\": $.releases[?(@.variant == 'classic_era')].{\"version\": version, \"gameVersionId\": gameVersionId}}"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^pom\\.xml$"],
+      "matchStrings": [
+        "<!-- renovate: datasource=custom.wow-game-versions-classic depName=wow-gameversion -->\\n\\s*<addon\\.curseforge\\.gameVersion>(?<currentValue>\\d+)</addon\\.curseforge\\.gameVersion>"
+      ],
+      "datasourceTemplate": "custom.wow-game-versions-classic",
+      "depNameTemplate": "wow-gameversion",
+      "versioningTemplate": "regex:^(?<major>\\d+)$",
+      "currentValueTemplate": "{{{gameVersionId}}}"
+    }
+  ]
+}
+```
+
+Then in your `pom.xml`, you can place this comment wherever the gameVersion property is defined:
+
+```xml
+<!-- renovate: datasource=custom.wow-game-versions-classic depName=wow-gameversion -->
+<addon.curseforge.gameVersion>12919</addon.curseforge.gameVersion>
+```
+
+This approach tracks the gameVersion ID independently. When a new version is released, Renovate will update the gameVersion ID to match the latest version in the specified variant.
+
+When a new Classic Era version is released (e.g., 1.15.8), Renovate will update both the patch version and the corresponding gameVersion ID.
 
 ## Dependency Management
 

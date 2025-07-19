@@ -1,0 +1,62 @@
+name: Update Game Versions
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+jobs:
+  update-game-versions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install
+    - name: Fetch latest game versions
+      env:
+        CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+      run: npm run fetch-game-versions
+    - name: Check for changes
+      id: changes
+      run: |
+        if git diff --quiet game-versions.json; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+    - name: Configure Git
+      if: steps.changes.outputs.changed == 'true'
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Create branch and commit changes
+      if: steps.changes.outputs.changed == 'true'
+      run: |
+        BRANCH_NAME="update-game-versions-${{ github.run_number }}"
+        git checkout -b "$BRANCH_NAME"
+        git add game-versions.json
+        git commit -m "chore: update game version IDs"
+        git push -u origin "$BRANCH_NAME"
+
+    - name: Create Pull Request
+      if: steps.changes.outputs.changed == 'true'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr create \
+          --title "Update game version IDs" \
+          --body "This PR updates the CurseForge game version IDs based on the latest data from CurseForge WoW API.
+
+          The changes were detected automatically by the scheduled workflow." \
+          --base master

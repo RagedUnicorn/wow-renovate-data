@@ -1,0 +1,857 @@
+{
+  "lastUpdated": "2025-07-19T19:05:44.411Z",
+  "releases": [
+    {
+      "version": "1.12.0",
+      "variant": "retail",
+      "gameVersionId": 1,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.0.1",
+      "variant": "retail",
+      "gameVersionId": 3,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.11.0",
+      "variant": "retail",
+      "gameVersionId": 4,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.10.0",
+      "variant": "retail",
+      "gameVersionId": 5,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.9.0",
+      "variant": "retail",
+      "gameVersionId": 6,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.8.0",
+      "variant": "retail",
+      "gameVersionId": 7,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.7.0",
+      "variant": "retail",
+      "gameVersionId": 8,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.6.0",
+      "variant": "retail",
+      "gameVersionId": 9,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.5.0",
+      "variant": "retail",
+      "gameVersionId": 10,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.4.0",
+      "variant": "retail",
+      "gameVersionId": 11,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.3.0",
+      "variant": "retail",
+      "gameVersionId": 12,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.2.0",
+      "variant": "retail",
+      "gameVersionId": 13,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.1.0",
+      "variant": "retail",
+      "gameVersionId": 14,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.0.0",
+      "variant": "retail",
+      "gameVersionId": 15,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.0.3",
+      "variant": "retail",
+      "gameVersionId": 17,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.0.6",
+      "variant": "retail",
+      "gameVersionId": 21,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.0.12",
+      "variant": "retail",
+      "gameVersionId": 23,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.1.0",
+      "variant": "retail",
+      "gameVersionId": 25,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.1.1",
+      "variant": "retail",
+      "gameVersionId": 27,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.1.2",
+      "variant": "retail",
+      "gameVersionId": 28,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.1.3",
+      "variant": "retail",
+      "gameVersionId": 29,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.2.0",
+      "variant": "retail",
+      "gameVersionId": 30,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.2.2",
+      "variant": "retail",
+      "gameVersionId": 31,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.2.3",
+      "variant": "retail",
+      "gameVersionId": 32,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.3.0",
+      "variant": "retail",
+      "gameVersionId": 33,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.3.2",
+      "variant": "retail",
+      "gameVersionId": 35,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.3.3",
+      "variant": "retail",
+      "gameVersionId": 36,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.4.0",
+      "variant": "retail",
+      "gameVersionId": 37,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.4.1",
+      "variant": "retail",
+      "gameVersionId": 38,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.4.2",
+      "variant": "retail",
+      "gameVersionId": 39,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.4.3",
+      "variant": "retail",
+      "gameVersionId": 41,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.0.2",
+      "variant": "retail",
+      "gameVersionId": 43,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.0.3",
+      "variant": "retail",
+      "gameVersionId": 44,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.0.8",
+      "variant": "retail",
+      "gameVersionId": 46,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.0.9",
+      "variant": "retail",
+      "gameVersionId": 48,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.1.0",
+      "variant": "retail",
+      "gameVersionId": 50,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.2.0",
+      "variant": "retail",
+      "gameVersionId": 55,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.3.0",
+      "variant": "retail",
+      "gameVersionId": 82,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.3.3",
+      "variant": "retail",
+      "gameVersionId": 93,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.3.5",
+      "variant": "retail",
+      "gameVersionId": 98,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.0.1",
+      "variant": "retail",
+      "gameVersionId": 114,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.0.3",
+      "variant": "retail",
+      "gameVersionId": 119,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.0.3a",
+      "variant": "retail",
+      "gameVersionId": 120,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.0.6",
+      "variant": "retail",
+      "gameVersionId": 126,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.1.0",
+      "variant": "retail",
+      "gameVersionId": 140,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.2.0",
+      "variant": "retail",
+      "gameVersionId": 149,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.3.0",
+      "variant": "retail",
+      "gameVersionId": 181,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.3.3",
+      "variant": "retail",
+      "gameVersionId": 199,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.3.4",
+      "variant": "retail",
+      "gameVersionId": 205,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.0.4",
+      "variant": "retail",
+      "gameVersionId": 238,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.0.5",
+      "variant": "retail",
+      "gameVersionId": 248,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.1.0",
+      "variant": "retail",
+      "gameVersionId": 264,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.2.0",
+      "variant": "retail",
+      "gameVersionId": 278,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.3.0",
+      "variant": "retail",
+      "gameVersionId": 314,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.4.0",
+      "variant": "retail",
+      "gameVersionId": 322,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.4.1",
+      "variant": "retail",
+      "gameVersionId": 363,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.4.2",
+      "variant": "retail",
+      "gameVersionId": 366,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.4.7",
+      "variant": "retail",
+      "gameVersionId": 405,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.4.8",
+      "variant": "retail",
+      "gameVersionId": 474,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.0.1",
+      "variant": "retail",
+      "gameVersionId": 493,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.0.2",
+      "variant": "retail",
+      "gameVersionId": 495,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.0.3",
+      "variant": "retail",
+      "gameVersionId": 497,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.1.0",
+      "variant": "retail",
+      "gameVersionId": 567,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.2.0",
+      "variant": "retail",
+      "gameVersionId": 576,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.2.2",
+      "variant": "retail",
+      "gameVersionId": 579,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.2.3",
+      "variant": "retail",
+      "gameVersionId": 582,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "6.2.4",
+      "variant": "retail",
+      "gameVersionId": 586,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.0.3",
+      "variant": "retail",
+      "gameVersionId": 589,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.1.0",
+      "variant": "retail",
+      "gameVersionId": 628,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.1.5",
+      "variant": "retail",
+      "gameVersionId": 6464,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.2.0",
+      "variant": "retail",
+      "gameVersionId": 6524,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.2.5",
+      "variant": "retail",
+      "gameVersionId": 6556,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.3.0",
+      "variant": "retail",
+      "gameVersionId": 6734,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.3.2",
+      "variant": "retail",
+      "gameVersionId": 6903,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "7.3.5",
+      "variant": "retail",
+      "gameVersionId": 6904,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.0.1",
+      "variant": "retail",
+      "gameVersionId": 7003,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.1.0",
+      "variant": "retail",
+      "gameVersionId": 7170,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.1.5",
+      "variant": "retail",
+      "gameVersionId": 7262,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.0",
+      "variant": "classic_era",
+      "gameVersionId": 7349,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.2",
+      "variant": "classic_era",
+      "gameVersionId": 7350,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.2.0",
+      "variant": "retail",
+      "gameVersionId": 7417,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.2.5",
+      "variant": "retail",
+      "gameVersionId": 7585,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.3",
+      "variant": "classic_era",
+      "gameVersionId": 7668,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "8.3.0",
+      "variant": "retail",
+      "gameVersionId": 7717,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.4",
+      "variant": "classic_era",
+      "gameVersionId": 7773,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.5",
+      "variant": "classic_era",
+      "gameVersionId": 7957,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.0.1",
+      "variant": "retail",
+      "gameVersionId": 7971,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.0.2",
+      "variant": "retail",
+      "gameVersionId": 8157,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.6",
+      "variant": "classic_era",
+      "gameVersionId": 8171,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.0.5",
+      "variant": "retail",
+      "gameVersionId": 8267,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.5.1",
+      "variant": "tbc_classic",
+      "gameVersionId": 8287,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.1.0",
+      "variant": "retail",
+      "gameVersionId": 8290,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.13.7",
+      "variant": "classic_era",
+      "gameVersionId": 8292,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.5.2",
+      "variant": "tbc_classic",
+      "gameVersionId": 8660,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.14.0",
+      "variant": "classic_era",
+      "gameVersionId": 8668,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.1.5",
+      "variant": "retail",
+      "gameVersionId": 8669,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.14.1",
+      "variant": "classic_era",
+      "gameVersionId": 8722,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.5.3",
+      "variant": "tbc_classic",
+      "gameVersionId": 8924,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.14.2",
+      "variant": "classic_era",
+      "gameVersionId": 8958,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.2.0",
+      "variant": "retail",
+      "gameVersionId": 8992,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "2.5.4",
+      "variant": "tbc_classic",
+      "gameVersionId": 9049,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.14.3",
+      "variant": "classic_era",
+      "gameVersionId": 9094,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.2.5",
+      "variant": "retail",
+      "gameVersionId": 9157,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.0",
+      "variant": "wotlk_classic",
+      "gameVersionId": 9320,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "9.2.7",
+      "variant": "retail",
+      "gameVersionId": 9412,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.0.0",
+      "variant": "retail",
+      "gameVersionId": 9493,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.0.2",
+      "variant": "retail",
+      "gameVersionId": 9494,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.1",
+      "variant": "wotlk_classic",
+      "gameVersionId": 9641,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.0.5",
+      "variant": "retail",
+      "gameVersionId": 9711,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.0.7",
+      "variant": "retail",
+      "gameVersionId": 9712,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.1.0",
+      "variant": "retail",
+      "gameVersionId": 9772,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.2",
+      "variant": "wotlk_classic",
+      "gameVersionId": 9894,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.14.4",
+      "variant": "classic_era",
+      "gameVersionId": 9895,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.1.5",
+      "variant": "retail",
+      "gameVersionId": 9919,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.1.7",
+      "variant": "retail",
+      "gameVersionId": 10163,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.2.0",
+      "variant": "retail",
+      "gameVersionId": 10215,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.3",
+      "variant": "wotlk_classic",
+      "gameVersionId": 10272,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.0",
+      "variant": "classic_era",
+      "gameVersionId": 10341,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.2.5",
+      "variant": "retail",
+      "gameVersionId": 10372,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.1",
+      "variant": "classic_era",
+      "gameVersionId": 10844,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.2.6",
+      "variant": "retail",
+      "gameVersionId": 10845,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.4.0",
+      "variant": "cata_classic",
+      "gameVersionId": 10977,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.2",
+      "variant": "classic_era",
+      "gameVersionId": 11084,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "10.2.7",
+      "variant": "retail",
+      "gameVersionId": 11263,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.0.0",
+      "variant": "retail",
+      "gameVersionId": 11274,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.3",
+      "variant": "classic_era",
+      "gameVersionId": 11459,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.0.2",
+      "variant": "retail",
+      "gameVersionId": 11596,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.4",
+      "variant": "classic_era",
+      "gameVersionId": 11893,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.4.1",
+      "variant": "cata_classic",
+      "gameVersionId": 11925,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.0.5",
+      "variant": "retail",
+      "gameVersionId": 11926,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.0.7",
+      "variant": "retail",
+      "gameVersionId": 12215,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.5",
+      "variant": "classic_era",
+      "gameVersionId": 12216,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.6",
+      "variant": "classic_era",
+      "gameVersionId": 12345,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "4.4.2",
+      "variant": "cata_classic",
+      "gameVersionId": 12494,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.1.0",
+      "variant": "retail",
+      "gameVersionId": 12495,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.4",
+      "variant": "wotlk_classic",
+      "gameVersionId": 12910,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.1.5",
+      "variant": "retail",
+      "gameVersionId": 12918,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "1.15.7",
+      "variant": "classic_era",
+      "gameVersionId": 12919,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "5.5.0",
+      "variant": "mop_classic",
+      "gameVersionId": 12975,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.1.7",
+      "variant": "retail",
+      "gameVersionId": 13203,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "11.2.0",
+      "variant": "retail",
+      "gameVersionId": 13433,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    },
+    {
+      "version": "3.4.5",
+      "variant": "wotlk_classic",
+      "gameVersionId": 13559,
+      "releaseTimestamp": "2025-07-19T19:05:44.411Z"
+    }
+  ]
+}
