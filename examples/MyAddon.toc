@@ -1,0 +1,9 @@
+## Interface: 11503
+## Title: My Classic Addon
+## Notes: An example addon for WoW Classic
+## Author: Your Name
+## Version: 1.0.0
+
+Core.lua
+Config.lua
+UI.lua

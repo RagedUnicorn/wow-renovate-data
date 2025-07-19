@@ -1,0 +1,2337 @@
+{
+  "lastUpdated": "2025-07-19T15:17:57.758Z",
+  "versions": [
+    {
+      "version": "11400",
+      "name": "1.14.0",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11302",
+      "name": "1.13.2",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11300",
+      "name": "1.13.0",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11305",
+      "name": "1.13.5",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11307",
+      "name": "1.13.7",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11306",
+      "name": "1.13.6",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11304",
+      "name": "1.13.4",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11303",
+      "name": "1.13.3",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11401",
+      "name": "1.14.1",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11402",
+      "name": "1.14.2",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11403",
+      "name": "1.14.3",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11404",
+      "name": "1.14.4",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11500",
+      "name": "1.15.0",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11501",
+      "name": "1.15.1",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11502",
+      "name": "1.15.2",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11503",
+      "name": "1.15.3",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11506",
+      "name": "1.15.6",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11504",
+      "name": "1.15.4",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11505",
+      "name": "1.15.5",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11507",
+      "name": "1.15.7",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "70205",
+      "name": "7.2.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20400",
+      "name": "2.4.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "11100",
+      "name": "1.11.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10800",
+      "name": "1.8.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50408",
+      "name": "5.4.8",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20101",
+      "name": "2.1.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90105",
+      "name": "9.1.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10500",
+      "name": "1.5.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50401",
+      "name": "5.4.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20402",
+      "name": "2.4.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10900",
+      "name": "1.9.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "11200",
+      "name": "1.12.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30008",
+      "name": "3.0.8",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50004",
+      "name": "5.0.4",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20300",
+      "name": "2.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20012",
+      "name": "2.0.12",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40006",
+      "name": "4.0.6",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60003",
+      "name": "6.0.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10000",
+      "name": "1.0.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20100",
+      "name": "2.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20401",
+      "name": "2.4.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20203",
+      "name": "2.2.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40200",
+      "name": "4.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80001",
+      "name": "8.0.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50200",
+      "name": "5.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50407",
+      "name": "5.4.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50100",
+      "name": "5.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40100",
+      "name": "4.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10600",
+      "name": "1.6.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20006",
+      "name": "2.0.6",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80300",
+      "name": "8.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60002",
+      "name": "6.0.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40300",
+      "name": "4.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10200",
+      "name": "1.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40003",
+      "name": "4.0.3a",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90002",
+      "name": "9.0.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "11000",
+      "name": "1.10.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10300",
+      "name": "1.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10400",
+      "name": "1.4.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80200",
+      "name": "8.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30100",
+      "name": "3.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40003",
+      "name": "4.0.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70305",
+      "name": "7.3.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70105",
+      "name": "7.1.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70302",
+      "name": "7.3.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30002",
+      "name": "3.0.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60202",
+      "name": "6.2.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30003",
+      "name": "3.0.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60203",
+      "name": "6.2.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20001",
+      "name": "2.0.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50300",
+      "name": "5.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60001",
+      "name": "6.0.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70300",
+      "name": "7.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20003",
+      "name": "2.0.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20102",
+      "name": "2.1.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60100",
+      "name": "6.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20103",
+      "name": "2.1.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50400",
+      "name": "5.4.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60200",
+      "name": "6.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80205",
+      "name": "8.2.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30009",
+      "name": "3.0.9",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40303",
+      "name": "4.3.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90005",
+      "name": "9.0.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20202",
+      "name": "2.2.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40304",
+      "name": "4.3.4",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "40001",
+      "name": "4.0.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90001",
+      "name": "9.0.1",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30305",
+      "name": "3.3.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30300",
+      "name": "3.3.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70100",
+      "name": "7.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70200",
+      "name": "7.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "60204",
+      "name": "6.2.4",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "70003",
+      "name": "7.0.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20303",
+      "name": "2.3.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50402",
+      "name": "5.4.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20403",
+      "name": "2.4.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90100",
+      "name": "9.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10100",
+      "name": "1.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "10700",
+      "name": "1.7.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20302",
+      "name": "2.3.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20200",
+      "name": "2.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80100",
+      "name": "8.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30303",
+      "name": "3.3.3",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "80105",
+      "name": "8.1.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "30200",
+      "name": "3.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "50005",
+      "name": "5.0.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90200",
+      "name": "9.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90205",
+      "name": "9.2.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "90207",
+      "name": "9.2.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100100",
+      "name": "10.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100000",
+      "name": "10.0.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100005",
+      "name": "10.0.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100007",
+      "name": "10.0.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100200",
+      "name": "10.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100105",
+      "name": "10.1.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100107",
+      "name": "10.1.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100205",
+      "name": "10.2.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100206",
+      "name": "10.2.6",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110000",
+      "name": "11.0.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110005",
+      "name": "11.0.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100207",
+      "name": "10.2.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110002",
+      "name": "11.0.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "100002",
+      "name": "10.0.2",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110007",
+      "name": "11.0.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110100",
+      "name": "11.1.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110107",
+      "name": "11.1.7",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110105",
+      "name": "11.1.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "110200",
+      "name": "11.2.0",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
+      "version": "20501",
+      "name": "2.5.1",
+      "variant": "tbc_classic",
+      "gameVersionTypeId": 73246,
+      "versionTypeName": "WoW Burning Crusade Classic",
+      "versionTypeSlug": "wow-burning-crusade-classic"
+    },
+    {
+      "version": "20502",
+      "name": "2.5.2",
+      "variant": "tbc_classic",
+      "gameVersionTypeId": 73246,
+      "versionTypeName": "WoW Burning Crusade Classic",
+      "versionTypeSlug": "wow-burning-crusade-classic"
+    },
+    {
+      "version": "20504",
+      "name": "2.5.4",
+      "variant": "tbc_classic",
+      "gameVersionTypeId": 73246,
+      "versionTypeName": "WoW Burning Crusade Classic",
+      "versionTypeSlug": "wow-burning-crusade-classic"
+    },
+    {
+      "version": "20503",
+      "name": "2.5.3",
+      "variant": "tbc_classic",
+      "gameVersionTypeId": 73246,
+      "versionTypeName": "WoW Burning Crusade Classic",
+      "versionTypeSlug": "wow-burning-crusade-classic"
+    },
+    {
+      "version": "30400",
+      "name": "3.4.0",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "30402",
+      "name": "3.4.2",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "30401",
+      "name": "3.4.1",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "30403",
+      "name": "3.4.3",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "30404",
+      "name": "3.4.4",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "30405",
+      "name": "3.4.5",
+      "variant": "wotlk_classic",
+      "gameVersionTypeId": 73713,
+      "versionTypeName": "WoW Wrath of the Lich King Classic",
+      "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+    },
+    {
+      "version": "40400",
+      "name": "4.4.0",
+      "variant": "cata_classic",
+      "gameVersionTypeId": 77522,
+      "versionTypeName": "WoW Cataclysm Classic",
+      "versionTypeSlug": "wow-cataclysm-classic"
+    },
+    {
+      "version": "40402",
+      "name": "4.4.2",
+      "variant": "cata_classic",
+      "gameVersionTypeId": 77522,
+      "versionTypeName": "WoW Cataclysm Classic",
+      "versionTypeSlug": "wow-cataclysm-classic"
+    },
+    {
+      "version": "40401",
+      "name": "4.4.1",
+      "variant": "cata_classic",
+      "gameVersionTypeId": 77522,
+      "versionTypeName": "WoW Cataclysm Classic",
+      "versionTypeSlug": "wow-cataclysm-classic"
+    },
+    {
+      "version": "50500",
+      "name": "5.5.0",
+      "variant": "mop_classic",
+      "gameVersionTypeId": 79434,
+      "versionTypeName": "WoW Mists of Pandaria Classic",
+      "versionTypeSlug": "wow-mists-of-pandaria-classic"
+    }
+  ],
+  "versionsByVariant": {
+    "classic_era": [
+      {
+        "version": "11507",
+        "name": "1.15.7",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11506",
+        "name": "1.15.6",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11505",
+        "name": "1.15.5",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11504",
+        "name": "1.15.4",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11503",
+        "name": "1.15.3",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11502",
+        "name": "1.15.2",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11501",
+        "name": "1.15.1",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11500",
+        "name": "1.15.0",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11404",
+        "name": "1.14.4",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11403",
+        "name": "1.14.3",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11402",
+        "name": "1.14.2",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11401",
+        "name": "1.14.1",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11400",
+        "name": "1.14.0",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11307",
+        "name": "1.13.7",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11306",
+        "name": "1.13.6",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11305",
+        "name": "1.13.5",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11304",
+        "name": "1.13.4",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11303",
+        "name": "1.13.3",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11302",
+        "name": "1.13.2",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
+      {
+        "version": "11300",
+        "name": "1.13.0",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      }
+    ],
+    "retail": [
+      {
+        "version": "110200",
+        "name": "11.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110107",
+        "name": "11.1.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110105",
+        "name": "11.1.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110100",
+        "name": "11.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110007",
+        "name": "11.0.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110005",
+        "name": "11.0.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110002",
+        "name": "11.0.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "110000",
+        "name": "11.0.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100207",
+        "name": "10.2.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100206",
+        "name": "10.2.6",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100205",
+        "name": "10.2.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100200",
+        "name": "10.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100107",
+        "name": "10.1.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100105",
+        "name": "10.1.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100100",
+        "name": "10.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100007",
+        "name": "10.0.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100005",
+        "name": "10.0.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100002",
+        "name": "10.0.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "100000",
+        "name": "10.0.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90207",
+        "name": "9.2.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90205",
+        "name": "9.2.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90200",
+        "name": "9.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90105",
+        "name": "9.1.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90100",
+        "name": "9.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90005",
+        "name": "9.0.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90002",
+        "name": "9.0.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "90001",
+        "name": "9.0.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80300",
+        "name": "8.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80205",
+        "name": "8.2.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80200",
+        "name": "8.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80105",
+        "name": "8.1.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80100",
+        "name": "8.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "80001",
+        "name": "8.0.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70305",
+        "name": "7.3.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70302",
+        "name": "7.3.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70300",
+        "name": "7.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70205",
+        "name": "7.2.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70200",
+        "name": "7.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70105",
+        "name": "7.1.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70100",
+        "name": "7.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "70003",
+        "name": "7.0.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60204",
+        "name": "6.2.4",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60203",
+        "name": "6.2.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60202",
+        "name": "6.2.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60200",
+        "name": "6.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60100",
+        "name": "6.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60003",
+        "name": "6.0.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60002",
+        "name": "6.0.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "60001",
+        "name": "6.0.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50408",
+        "name": "5.4.8",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50407",
+        "name": "5.4.7",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50402",
+        "name": "5.4.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50401",
+        "name": "5.4.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50400",
+        "name": "5.4.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50300",
+        "name": "5.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50200",
+        "name": "5.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50100",
+        "name": "5.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50005",
+        "name": "5.0.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "50004",
+        "name": "5.0.4",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40304",
+        "name": "4.3.4",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40303",
+        "name": "4.3.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40300",
+        "name": "4.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40200",
+        "name": "4.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40100",
+        "name": "4.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40006",
+        "name": "4.0.6",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40003",
+        "name": "4.0.3a",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40003",
+        "name": "4.0.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "40001",
+        "name": "4.0.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30305",
+        "name": "3.3.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30303",
+        "name": "3.3.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30300",
+        "name": "3.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30200",
+        "name": "3.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30100",
+        "name": "3.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30009",
+        "name": "3.0.9",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30008",
+        "name": "3.0.8",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30003",
+        "name": "3.0.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "30002",
+        "name": "3.0.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20403",
+        "name": "2.4.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20402",
+        "name": "2.4.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20401",
+        "name": "2.4.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20400",
+        "name": "2.4.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20303",
+        "name": "2.3.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20302",
+        "name": "2.3.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20300",
+        "name": "2.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20203",
+        "name": "2.2.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20202",
+        "name": "2.2.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20200",
+        "name": "2.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20103",
+        "name": "2.1.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20102",
+        "name": "2.1.2",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20101",
+        "name": "2.1.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20100",
+        "name": "2.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20012",
+        "name": "2.0.12",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20006",
+        "name": "2.0.6",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20003",
+        "name": "2.0.3",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "20001",
+        "name": "2.0.1",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "11200",
+        "name": "1.12.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "11100",
+        "name": "1.11.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "11000",
+        "name": "1.10.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10900",
+        "name": "1.9.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10800",
+        "name": "1.8.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10700",
+        "name": "1.7.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10600",
+        "name": "1.6.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10500",
+        "name": "1.5.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10400",
+        "name": "1.4.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10300",
+        "name": "1.3.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10200",
+        "name": "1.2.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10100",
+        "name": "1.1.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
+      {
+        "version": "10000",
+        "name": "1.0.0",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      }
+    ],
+    "tbc_classic": [
+      {
+        "version": "20504",
+        "name": "2.5.4",
+        "variant": "tbc_classic",
+        "gameVersionTypeId": 73246,
+        "versionTypeName": "WoW Burning Crusade Classic",
+        "versionTypeSlug": "wow-burning-crusade-classic"
+      },
+      {
+        "version": "20503",
+        "name": "2.5.3",
+        "variant": "tbc_classic",
+        "gameVersionTypeId": 73246,
+        "versionTypeName": "WoW Burning Crusade Classic",
+        "versionTypeSlug": "wow-burning-crusade-classic"
+      },
+      {
+        "version": "20502",
+        "name": "2.5.2",
+        "variant": "tbc_classic",
+        "gameVersionTypeId": 73246,
+        "versionTypeName": "WoW Burning Crusade Classic",
+        "versionTypeSlug": "wow-burning-crusade-classic"
+      },
+      {
+        "version": "20501",
+        "name": "2.5.1",
+        "variant": "tbc_classic",
+        "gameVersionTypeId": 73246,
+        "versionTypeName": "WoW Burning Crusade Classic",
+        "versionTypeSlug": "wow-burning-crusade-classic"
+      }
+    ],
+    "wotlk_classic": [
+      {
+        "version": "30405",
+        "name": "3.4.5",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      },
+      {
+        "version": "30404",
+        "name": "3.4.4",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      },
+      {
+        "version": "30403",
+        "name": "3.4.3",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      },
+      {
+        "version": "30402",
+        "name": "3.4.2",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      },
+      {
+        "version": "30401",
+        "name": "3.4.1",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      },
+      {
+        "version": "30400",
+        "name": "3.4.0",
+        "variant": "wotlk_classic",
+        "gameVersionTypeId": 73713,
+        "versionTypeName": "WoW Wrath of the Lich King Classic",
+        "versionTypeSlug": "wow-wrath-of-the-lich-king-classic"
+      }
+    ],
+    "cata_classic": [
+      {
+        "version": "40402",
+        "name": "4.4.2",
+        "variant": "cata_classic",
+        "gameVersionTypeId": 77522,
+        "versionTypeName": "WoW Cataclysm Classic",
+        "versionTypeSlug": "wow-cataclysm-classic"
+      },
+      {
+        "version": "40401",
+        "name": "4.4.1",
+        "variant": "cata_classic",
+        "gameVersionTypeId": 77522,
+        "versionTypeName": "WoW Cataclysm Classic",
+        "versionTypeSlug": "wow-cataclysm-classic"
+      },
+      {
+        "version": "40400",
+        "name": "4.4.0",
+        "variant": "cata_classic",
+        "gameVersionTypeId": 77522,
+        "versionTypeName": "WoW Cataclysm Classic",
+        "versionTypeSlug": "wow-cataclysm-classic"
+      }
+    ],
+    "mop_classic": [
+      {
+        "version": "50500",
+        "name": "5.5.0",
+        "variant": "mop_classic",
+        "gameVersionTypeId": 79434,
+        "versionTypeName": "WoW Mists of Pandaria Classic",
+        "versionTypeSlug": "wow-mists-of-pandaria-classic"
+      }
+    ]
+  },
+  "versionTypes": {
+    "517": {
+      "id": 517,
+      "name": "WoW Retail",
+      "slug": "wow-retail",
+      "variant": "retail"
+    },
+    "67408": {
+      "id": 67408,
+      "name": "WoW Classic Era",
+      "slug": "wow-classic-era",
+      "variant": "classic_era"
+    },
+    "73246": {
+      "id": 73246,
+      "name": "WoW Burning Crusade Classic",
+      "slug": "wow-burning-crusade-classic",
+      "variant": "tbc_classic"
+    },
+    "73713": {
+      "id": 73713,
+      "name": "WoW Wrath of the Lich King Classic",
+      "slug": "wow-wrath-of-the-lich-king-classic",
+      "variant": "wotlk_classic"
+    },
+    "77522": {
+      "id": 77522,
+      "name": "WoW Cataclysm Classic",
+      "slug": "wow-cataclysm-classic",
+      "variant": "cata_classic"
+    },
+    "79434": {
+      "id": 79434,
+      "name": "WoW Mists of Pandaria Classic",
+      "slug": "wow-mists-of-pandaria-classic",
+      "variant": "mop_classic"
+    }
+  },
+  "summary": {
+    "classic_era": 20,
+    "tbc_classic": 4,
+    "wotlk_classic": 6,
+    "cata_classic": 3,
+    "mop_classic": 1,
+    "retail": 108
+  }
+}

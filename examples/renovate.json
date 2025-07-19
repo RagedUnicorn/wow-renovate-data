@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "customDatasources": {
+    "wow-interface": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/YOUR_USERNAME/wow-renovate-data/main/versions.json",
+      "transformTemplates": [
+        "{\"releases\": $.versions.map(v => ({\"version\": v.version, \"releaseTimestamp\": $.lastUpdated}))}"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update WoW Interface versions in TOC files",
+      "fileMatch": ["\\.toc$"],
+      "matchStrings": [
+        "## Interface:\\s*(?<currentValue>\\d+)"
+      ],
+      "datasourceTemplate": "custom.wow-interface",
+      "depNameTemplate": "wow-interface",
+      "versioningTemplate": "regex:^(?<major>\\d)(?<minor>\\d{2})(?<patch>\\d{2})$"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["custom.wow-interface"],
+      "automerge": false,
+      "commitMessageTopic": "WoW Interface",
+      "commitMessagePrefix": "chore(deps):",
+      "prBodyDefinitions": {
+        "Package": "WoW Interface Version"
+      }
+    }
+  ]
+}

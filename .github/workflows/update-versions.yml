@@ -1,0 +1,51 @@
+name: Update WoW Versions
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Fetch latest versions
+      env:
+        CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+      run: npm run fetch
+      
+    - name: Check for changes
+      id: changes
+      run: |
+        if git diff --quiet versions.json; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Create Pull Request
+      if: steps.changes.outputs.changed == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        commit-message: 'chore: update WoW interface versions'
+        title: 'Update WoW interface versions'
+        body: |
+          This PR updates the WoW interface versions based on the latest data from CurseForge.
+          
+          The changes were detected automatically by the scheduled workflow.
+        branch: update-versions-${{ github.run_number }}
+        delete-branch: true
