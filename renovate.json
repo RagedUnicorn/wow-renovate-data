@@ -32,14 +32,16 @@
       "description": "Automerge dev dependencies"
     },
     {
-      "matchPackagePatterns": ["eslint"],
       "groupName": "eslint packages",
-      "description": "Group all ESLint related packages"
+      "description": "Group all ESLint related packages",
+      "matchPackageNames": [
+        "/eslint/"
+      ]
     }
   ],
   "github-actions": {
-    "fileMatch": [
-      "^\\.github/workflows/.*\\.ya?ml$"
+    "managerFilePatterns": [
+      "/^\\.github/workflows/.*\\.ya?ml$/"
     ]
   },
   "prBodyDefinitions": {
