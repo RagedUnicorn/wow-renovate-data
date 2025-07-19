@@ -1,0 +1,57 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "schedule": [
+    "on monday"
+  ],
+  "timezone": "UTC",
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
+  "commitMessagePrefix": "chore(deps):",
+  "prConcurrentLimit": 2,
+  "prCreation": "immediate",
+  "automerge": false,
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github actions",
+      "description": "Group all GitHub Actions updates"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "Automerge dev dependencies"
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint packages",
+      "description": "Group all ESLint related packages"
+    }
+  ],
+  "github-actions": {
+    "fileMatch": [
+      "^\\.github/workflows/.*\\.ya?ml$"
+    ]
+  },
+  "prBodyDefinitions": {
+    "Package": "{{depName}}",
+    "Type": "{{depType}}",
+    "Change": "{{updateType}}",
+    "Current": "{{currentVersion}}",
+    "New": "{{newVersion}}",
+    "Age": "{{age}}",
+    "Adoption": "{{adoption}}",
+    "Passing": "{{passing}}",
+    "Confidence": "{{confidence}}"
+  },
+  "postUpdateOptions": []
+}

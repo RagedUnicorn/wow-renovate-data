@@ -92,6 +92,16 @@ WoW interface versions follow this pattern:
 - Major version (1 digit) + Minor version (2 digits) + Patch version (2 digits)
 - Example: Version 1.15.3 becomes Interface 11503
 
+## Dependency Management
+
+This project uses [Renovate](https://renovatebot.com/) for automated dependency updates. Renovate will:
+- Check for updates to npm dependencies weekly (every Monday)
+- Group related updates (ESLint packages, GitHub Actions)
+- Automatically merge dev dependency updates
+- Create pull requests for review of production dependencies
+
+The Renovate configuration can be found in `renovate.json`.
+
 ## License
 
 MIT License
