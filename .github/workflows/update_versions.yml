@@ -10,6 +10,9 @@ on:
 jobs:
   update-versions:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
     - name: Checkout repository
@@ -62,4 +65,4 @@ jobs:
           --body "This PR updates the WoW interface versions based on the latest data from CurseForge.
 
           The changes were detected automatically by the scheduled workflow." \
-          --base main
+          --base master
