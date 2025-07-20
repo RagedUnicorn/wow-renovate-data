@@ -16,8 +16,9 @@ class VersionParser {
     // "3.4.3" -> 30403 (WotLK Classic)
     // "4.4.0" -> 40400 (Cata Classic)
     // "11.2.0" -> 110200 (Retail)
-    // Must be exactly three numeric parts separated by dots
-    const versionMatch = versionName.match(/^(\d+)\.(\d+)\.(\d+)$/);
+    // "4.0.3a" -> 40003 (Classic with letter suffix)
+    // Must be exactly three numeric parts separated by dots, with optional letter suffix
+    const versionMatch = versionName.match(/^(\d+)\.(\d+)\.(\d+)([a-zA-Z]?)$/);
 
     if (!versionMatch) {
       return null;

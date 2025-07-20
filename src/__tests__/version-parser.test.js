@@ -32,6 +32,12 @@ describe('VersionParser', () => {
       expect(parser.parseInterfaceVersion('10.15.20')).toBe('101520');
     });
 
+    it('should parse version with letter suffix correctly', () => {
+      expect(parser.parseInterfaceVersion('4.0.3a')).toBe('40003');
+      expect(parser.parseInterfaceVersion('1.15.3b')).toBe('11503');
+      expect(parser.parseInterfaceVersion('11.2.0c')).toBe('110200');
+    });
+
     it('should return null for invalid version format', () => {
       expect(parser.parseInterfaceVersion('invalid')).toBeNull();
       expect(parser.parseInterfaceVersion('1.2')).toBeNull();
@@ -39,9 +45,9 @@ describe('VersionParser', () => {
       expect(parser.parseInterfaceVersion('1.2.3.4')).toBeNull();
       expect(parser.parseInterfaceVersion('1.15.3-beta')).toBeNull();
       expect(parser.parseInterfaceVersion('v1.15.3')).toBeNull();
-      expect(parser.parseInterfaceVersion('1.15.3a')).toBeNull();
       expect(parser.parseInterfaceVersion(' 1.15.3')).toBeNull();
       expect(parser.parseInterfaceVersion('1.15.3 ')).toBeNull();
+      expect(parser.parseInterfaceVersion('1.15.3ab')).toBeNull(); // Multiple letters not allowed
     });
   });
 
