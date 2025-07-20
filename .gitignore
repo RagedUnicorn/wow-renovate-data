@@ -4,3 +4,9 @@ node_modules/
 *.log
 dist/
 coverage/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
