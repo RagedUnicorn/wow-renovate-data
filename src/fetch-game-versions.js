@@ -57,14 +57,13 @@ async function saveGameVersionsToFile(gameVersions, versionParser) {
 
   // Process each variant
   Object.entries(versionsByVariant).forEach(([variant, versions]) => {
-    versions.forEach((versionData, index) => {
+    versions.forEach((versionData) => {
       renovateReleases.push({
         // Use gameVersionId as the version (what Renovate will use)
         version: String(versionData.gameVersionId),
         // Keep the original version for reference
         originalVersion: versionData.version,
-        variant: variant,
-        releaseTimestamp: new Date(Date.now() - (versions.length - index - 1) * 86400000).toISOString()
+        variant: variant
       });
     });
   });
