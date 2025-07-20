@@ -44,6 +44,40 @@
       "env": {
         "NODE_ENV": "test"
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ESLint All Files",
+      "program": "${workspaceFolder}/node_modules/eslint/bin/eslint.js",
+      "args": [
+        "src/**/*.js"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ESLint Current File",
+      "program": "${workspaceFolder}/node_modules/eslint/bin/eslint.js",
+      "args": [
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ESLint Fix All Files",
+      "program": "${workspaceFolder}/node_modules/eslint/bin/eslint.js",
+      "args": [
+        "src/**/*.js",
+        "--fix"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
     }
   ]
 }
