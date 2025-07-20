@@ -15,6 +15,17 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Run Fetch Game Versions Script",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/fetch-game-versions.js",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Jest All Tests",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "args": [
