@@ -120,7 +120,8 @@ Then in your `pom.xml`:
 <addon.supported.patch>1.15.7</addon.supported.patch>
 ```
 
-**Note**: You can filter by variant in the transformTemplates. Available variants are:
+**Available variants for filtering**:
+
 - `retail` - Current retail version
 - `classic_era` - Classic Era (Vanilla)
 - `tbc_classic` - The Burning Crusade Classic
@@ -175,6 +176,12 @@ npm run fetch-game-versions
 
 The script fetches gameVersion IDs from the CurseForge WoW API (`wow.curseforge.com/api/game/versions`). It automatically maps each version to its correct variant (retail, classic_era, tbc_classic, etc.) and generates a `game-versions.json` file in Renovate-compatible datasource format.
 
+The generated file contains releases sorted by gameVersionId (newest first), with each release including:
+- `version`: The gameVersionId (e.g., "12919") 
+- `originalVersion`: The WoW patch version (e.g., "1.15.7")
+- `variant`: The WoW variant (e.g., "classic_era")
+- `releaseTimestamp`: When the data was fetched
+
 ### Tracking GameVersion IDs with Renovate
 
 The `game-versions.json` file can be used with Renovate to track gameVersion IDs. You can filter by variant using JSONPath.
@@ -184,10 +191,11 @@ To automatically update gameVersion IDs when new WoW patches are released, add t
 ```json
 {
   "customDatasources": {
-    "wow-game-versions-classic": {
+    "wow-game-versions": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/ragedunicorn/wow-renovate-data/master/game-versions.json",
+      "format": "json",
       "transformTemplates": [
-        "{\"releases\": $.releases[?(@.variant == 'classic_era')].{\"version\": version, \"gameVersionId\": gameVersionId}}"
+        "{ \"releases\": $.releases[variant = 'classic_era'] }"
       ]
     }
   },
@@ -196,12 +204,10 @@ To automatically update gameVersion IDs when new WoW patches are released, add t
       "customType": "regex",
       "fileMatch": ["^pom\\.xml$"],
       "matchStrings": [
-        "<!-- renovate: datasource=custom.wow-game-versions-classic depName=wow-gameversion -->\\n\\s*<addon\\.curseforge\\.gameVersion>(?<currentValue>\\d+)</addon\\.curseforge\\.gameVersion>"
+        "<!-- renovate: datasource=custom.wow-game-versions depName=wow-gameversion versioning=loose -->\\n\\s*<addon\\.curseforge\\.gameVersion>(?<currentValue>\\d+)</addon\\.curseforge\\.gameVersion>"
       ],
-      "datasourceTemplate": "custom.wow-game-versions-classic",
-      "depNameTemplate": "wow-gameversion",
-      "versioningTemplate": "regex:^(?<major>\\d+)$",
-      "currentValueTemplate": "{{{gameVersionId}}}"
+      "datasourceTemplate": "custom.wow-game-versions",
+      "depNameTemplate": "wow-gameversion"
     }
   ]
 }
@@ -210,13 +216,13 @@ To automatically update gameVersion IDs when new WoW patches are released, add t
 Then in your `pom.xml`, you can place this comment wherever the gameVersion property is defined:
 
 ```xml
-<!-- renovate: datasource=custom.wow-game-versions-classic depName=wow-gameversion -->
+<!-- renovate: datasource=custom.wow-game-versions depName=wow-gameversion versioning=loose -->
 <addon.curseforge.gameVersion>12919</addon.curseforge.gameVersion>
 ```
 
-This approach tracks the gameVersion ID independently. When a new version is released, Renovate will update the gameVersion ID to match the latest version in the specified variant.
+This approach tracks the gameVersion ID independently. When a new version is released (e.g., 1.15.8), Renovate will update the gameVersion ID to the one corresponding to the latest version in the specified variant.
 
-When a new Classic Era version is released (e.g., 1.15.8), Renovate will update both the patch version and the corresponding gameVersion ID.
+**Note about variant filtering**: The `transformTemplates` uses JSONPath to filter releases by variant. You can change `'classic_era'` to any other variant like `'retail'`, `'wotlk_classic'`, etc.
 
 ## Dependency Management
 
