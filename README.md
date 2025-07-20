@@ -4,6 +4,8 @@
 ![](./docs/wow_renovate_data.png)
 [![Update WoW Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml)
 [![Update Game Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml)
+[![Test](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/test.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/test.yml)
+[![Lint](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/lint.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/lint.yml)
 ![](docs/license_badge.svg)
 
 > A data source for [Renovate](https://docs.renovatebot.com/) to track World of Warcraft interface versions. This allows automated dependency updates for WoW addon TOC and other similar files.
@@ -177,7 +179,7 @@ npm run fetch-game-versions
 The script fetches gameVersion IDs from the CurseForge WoW API (`wow.curseforge.com/api/game/versions`). It automatically maps each version to its correct variant (retail, classic_era, tbc_classic, etc.) and generates a `game-versions.json` file in Renovate-compatible datasource format.
 
 The generated file contains releases sorted by gameVersionId (newest first), with each release including:
-- `version`: The gameVersionId (e.g., "12919") 
+- `version`: The gameVersionId (e.g., "12919")
 - `originalVersion`: The WoW patch version (e.g., "1.15.7")
 - `variant`: The WoW variant (e.g., "classic_era")
 - `releaseTimestamp`: When the data was fetched
