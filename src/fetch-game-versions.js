@@ -2,31 +2,38 @@ require('dotenv').config();
 const fs = require('fs').promises;
 const path = require('path');
 const CurseForgeClient = require('./curseforge-client');
+const VersionParser = require('./version-parser');
 
+/**
+ * Prints a summary of game versions grouped by variant.
+ *
+ * @param {Object} gameVersions - Object mapping version names to version data
+ */
 function printSummary(gameVersions) {
   const variantCounts = {};
+
   Object.values(gameVersions).forEach(v => {
     variantCounts[v.variant] = (variantCounts[v.variant] || 0) + 1;
   });
 
   console.log('\nSummary:');
   console.log(`Total gameVersion IDs: ${Object.keys(gameVersions).length}`);
+
   Object.entries(variantCounts).forEach(([variant, count]) => {
     console.log(`- ${variant}: ${count} versions`);
   });
 }
 
-// Helper function to parse version strings like "1.15.3" into comparable numbers
-function parseVersion(versionString) {
-  const parts = versionString.split('.');
-  // Convert to a single number for easy comparison: major*10000 + minor*100 + patch
-  const major = parseInt(parts[0] || '0', 10);
-  const minor = parseInt(parts[1] || '0', 10);
-  const patch = parseInt(parts[2] || '0', 10);
-  return major * 10000 + minor * 100 + patch;
-}
-
-async function saveGameVersionsToFile(gameVersions) {
+/**
+ * Saves game versions to a JSON file in Renovate-compatible format.
+ * Organizes versions by variant and assigns release timestamps.
+ *
+ * @param {Object} gameVersions - Object mapping version names to version data
+ * @param {VersionParser} versionParser - Instance of VersionParser for version number parsing
+ *
+ * @returns {Promise<void>}
+ */
+async function saveGameVersionsToFile(gameVersions, versionParser) {
   // First, organize all versions by variant
   const versionsByVariant = {};
 
@@ -37,7 +44,7 @@ async function saveGameVersionsToFile(gameVersions) {
     versionsByVariant[data.variant].push({
       version: versionName,
       gameVersionId: data.id,
-      sortOrder: parseVersion(versionName)
+      sortOrder: versionParser.parseVersionToNumber(versionName)
     });
   });
 
@@ -46,12 +53,10 @@ async function saveGameVersionsToFile(gameVersions) {
     versions.sort((a, b) => b.sortOrder - a.sortOrder);
   });
 
-  // Create releases for Renovate datasource
   const renovateReleases = [];
 
   // Process each variant
   Object.entries(versionsByVariant).forEach(([variant, versions]) => {
-    // For each version in this variant, create a release
     versions.forEach((versionData, index) => {
       renovateReleases.push({
         // Use gameVersionId as the version (what Renovate will use)
@@ -59,8 +64,6 @@ async function saveGameVersionsToFile(gameVersions) {
         // Keep the original version for reference
         originalVersion: versionData.version,
         variant: variant,
-        // Create a timestamp that ensures proper ordering
-        // Most recent versions get the most recent timestamp
         releaseTimestamp: new Date(Date.now() - (versions.length - index - 1) * 86400000).toISOString()
       });
     });
@@ -73,46 +76,41 @@ async function saveGameVersionsToFile(gameVersions) {
 
   const outputPath = path.join(__dirname, '..', 'game-versions.json');
   await fs.writeFile(outputPath, JSON.stringify(datasource, null, 2));
+
   console.log(`Saved game versions to ${outputPath}`);
-
-  // Also save a mapping file for debugging/reference
-  const mappingData = {
-    lastUpdated: new Date().toISOString(),
-    mappings: Object.entries(gameVersions).map(([version, data]) => ({
-      version: version,
-      gameVersionId: data.id,
-      variant: data.variant
-    })).sort((a, b) => {
-      if (a.variant !== b.variant) {
-        return a.variant.localeCompare(b.variant);
-      }
-      return parseVersion(b.version) - parseVersion(a.version);
-    })
-  };
-
-  const mappingPath = path.join(__dirname, '..', 'game-versions-mapping.json');
-  await fs.writeFile(mappingPath, JSON.stringify(mappingData, null, 2));
-  console.log(`Saved version mappings to ${mappingPath}`);
 }
 
+/**
+ * Reads the existing game versions from the JSON file.
+ *
+ * @returns {Promise<Object|null>} The parsed game version data or null if file doesn't exist
+ */
 async function readExistingGameVersions() {
   const outputPath = path.join(__dirname, '..', 'game-versions.json');
+
   try {
     const content = await fs.readFile(outputPath, 'utf8');
     return JSON.parse(content);
-  } catch (error) {
-    // File doesn't exist or is invalid
+  } catch (_error) {
     return null;
   }
 }
 
+/**
+ * Checks if game versions have changed between old and new data.
+ *
+ * @param {Object|null} oldData - The previous game version data
+ * @param {Object} gameVersions - The new game version data
+ *
+ * @returns {boolean} True if versions have changed or oldData is null
+ */
 function hasGameVersionsChanged(oldData, gameVersions) {
   if (!oldData || !oldData.releases) return true;
 
   // Create a map of existing versions for comparison
   const oldVersionsMap = {};
+
   oldData.releases.forEach(release => {
-    // Map by gameVersionId since that's what we're using as version now
     oldVersionsMap[release.version] = {
       originalVersion: release.originalVersion,
       variant: release.variant
@@ -121,6 +119,7 @@ function hasGameVersionsChanged(oldData, gameVersions) {
 
   // Compare with new data
   const newVersionsMap = {};
+
   Object.entries(gameVersions).forEach(([version, data]) => {
     newVersionsMap[String(data.id)] = {
       originalVersion: version,
@@ -131,6 +130,14 @@ function hasGameVersionsChanged(oldData, gameVersions) {
   return JSON.stringify(oldVersionsMap) !== JSON.stringify(newVersionsMap);
 }
 
+/**
+ * Processes raw game version data from the API into a structured format.
+ *
+ * @param {Array} data - Array of game version objects from CurseForge API
+ * @param {Object} versionTypeMap - Mapping of version type IDs to variant names
+ *
+ * @returns {Object} Object mapping version names to {id, variant} objects
+ */
 function processGameVersionData(data, versionTypeMap) {
   // Transform the API response into our format
   const gameVersions = {};
@@ -154,6 +161,12 @@ function processGameVersionData(data, versionTypeMap) {
   return gameVersions;
 }
 
+/**
+ * Validates that the CurseForge API key is present in environment variables.
+ * Exits the process if the API key is not found.
+ *
+ * @returns {string} The CurseForge API key
+ */
 function validateApiKey() {
   const apiKey = process.env.CURSEFORGE_API_KEY;
 
@@ -166,16 +179,19 @@ function validateApiKey() {
   return apiKey;
 }
 
+/**
+ * Main function to fetch game version IDs from CurseForge and save them to file.
+ * Checks for changes before updating to preserve lastUpdated timestamp when appropriate.
+ *
+ * @returns {Promise<void>}
+ */
 async function fetchAndSaveGameVersions() {
   const apiKey = validateApiKey();
-
   const client = new CurseForgeClient(apiKey);
 
   try {
     console.log('Fetching game version IDs from CurseForge Upload API...');
     const gameVersionData = await client.getGameVersionIds();
-
-    // Get the version type mappings from the client
     const versionTypeMap = client.getVersionTypes();
 
     console.log('Processing game version IDs...');
@@ -195,19 +211,17 @@ async function fetchAndSaveGameVersions() {
     if (existingData && !hasGameVersionsChanged(existingData, gameVersions)) {
       console.log('No changes detected, keeping existing file');
     } else {
-      // Save to game-versions.json in datasource format
-      await saveGameVersionsToFile(gameVersions);
+      const versionParser = new VersionParser();
+      await saveGameVersionsToFile(gameVersions, versionParser);
     }
 
     printSummary(gameVersions);
-
   } catch (error) {
     console.error('Error fetching game versions:', error);
     process.exit(1);
   }
 }
 
-// Run if called directly
 if (require.main === module) {
   fetchAndSaveGameVersions();
 }

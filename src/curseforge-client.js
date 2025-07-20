@@ -1,7 +1,15 @@
 const axios = require('axios');
 const packageInfo = require('../package.json');
 
+/**
+ * Client for interacting with the CurseForge API to fetch WoW version data.
+ */
 class CurseForgeClient {
+  /**
+   * Creates a new CurseForgeClient instance.
+   *
+   * @param {string} apiKey - The CurseForge API key for authentication
+   */
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.baseUrl = 'https://api.curseforge.com/v1';
@@ -19,6 +27,13 @@ class CurseForgeClient {
     };
   }
 
+  /**
+   * Fetches game version groups from the CurseForge API.
+   *
+   * @returns {Promise<Array>} Array of version group objects
+   *
+   * @throws {Error} If the API request fails
+   */
   async getGameVersions() {
     try {
       const response = await axios.get(
@@ -31,13 +46,20 @@ class CurseForgeClient {
           }
         }
       );
+
       return response.data.data;
     } catch (error) {
       console.error('Error fetching game versions:', error.message);
+
       throw error;
     }
   }
 
+  /**
+   * Fetches and processes all WoW versions from all version groups.
+   *
+   * @returns {Promise<Array>} Array of version objects with name, type, variant, and type metadata
+   */
   async getAllWowVersions() {
     const versionGroups = await this.getGameVersions();
 
@@ -51,11 +73,11 @@ class CurseForgeClient {
 
       // Check if this is a known version type
       const versionType = this.versionTypeMap[group.type];
+
       if (!versionType) {
-        return; // Skip unknown version types
+        return;
       }
 
-      // Add all versions from this type
       group.versions.forEach(version => {
         allVersions.push({
           name: version,
@@ -70,11 +92,22 @@ class CurseForgeClient {
     return allVersions;
   }
 
+  /**
+   * Returns the hardcoded version type mappings.
+   *
+   * @returns {Object} Object mapping version type IDs to their metadata
+   */
   getVersionTypes() {
-    // Return our hardcoded version type mappings
     return this.versionTypeMap;
   }
 
+  /**
+   * Fetches game version IDs from the CurseForge Upload API.
+   *
+   * @returns {Promise<Array>} Array of game version objects with IDs
+   *
+   * @throws {Error} If the API request fails
+   */
   async getGameVersionIds() {
     try {
       const response = await axios.get(
@@ -90,6 +123,7 @@ class CurseForgeClient {
       return response.data;
     } catch (error) {
       console.error('Error fetching game version IDs:', error.message);
+
       throw error;
     }
   }
