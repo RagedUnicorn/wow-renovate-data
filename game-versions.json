@@ -1,6 +1,11 @@
 {
-  "lastUpdated": "2025-09-11T18:01:07.247Z",
+  "lastUpdated": "2025-10-03T12:01:09.978Z",
   "releases": [
+    {
+      "version": "13924",
+      "originalVersion": "12.0.0",
+      "variant": "retail"
+    },
     {
       "version": "13771",
       "originalVersion": "11.2.5",
