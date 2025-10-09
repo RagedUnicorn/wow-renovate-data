@@ -54,9 +54,13 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh pr create \
+        BRANCH_NAME="update-versions-${{ github.run_number }}"
+        PR_URL=$(gh pr create \
           --title "Update WoW interface versions" \
           --body "This PR updates the WoW interface versions based on the latest data from CurseForge.
 
           The changes were detected automatically by the scheduled workflow." \
-          --base master
+          --base master \
+          --head "$BRANCH_NAME")
+
+        gh pr merge "$PR_URL" --auto --squash
