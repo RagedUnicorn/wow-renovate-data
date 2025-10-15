@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-14T12:03:34.671Z",
+  "lastUpdated": "2025-10-15T00:07:25.373Z",
   "versions": [
     {
       "version": "11400",
@@ -156,6 +156,14 @@
     {
       "version": "11507",
       "name": "1.15.7",
+      "variant": "classic_era",
+      "gameVersionTypeId": 67408,
+      "versionTypeName": "WoW Classic Era",
+      "versionTypeSlug": "wow-classic-era"
+    },
+    {
+      "version": "11508",
+      "name": "1.15.8",
       "variant": "classic_era",
       "gameVersionTypeId": 67408,
       "versionTypeName": "WoW Classic Era",
@@ -1172,6 +1180,14 @@
   ],
   "versionsByVariant": {
     "classic_era": [
+      {
+        "version": "11508",
+        "name": "1.15.8",
+        "variant": "classic_era",
+        "gameVersionTypeId": 67408,
+        "versionTypeName": "WoW Classic Era",
+        "versionTypeSlug": "wow-classic-era"
+      },
       {
         "version": "11507",
         "name": "1.15.7",
@@ -2391,7 +2407,7 @@
     }
   },
   "summary": {
-    "classic_era": 20,
+    "classic_era": 21,
     "tbc_classic": 4,
     "wotlk_classic": 6,
     "cata_classic": 3,
