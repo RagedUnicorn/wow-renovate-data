@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-13T18:01:02.967Z",
+  "lastUpdated": "2025-10-15T00:01:27.140Z",
   "releases": [
     {
       "version": "13924",
@@ -555,6 +555,11 @@
       "version": "15",
       "originalVersion": "1.0.0",
       "variant": "retail"
+    },
+    {
+      "version": "14029",
+      "originalVersion": "1.15.8",
+      "variant": "classic_era"
     },
     {
       "version": "12919",
