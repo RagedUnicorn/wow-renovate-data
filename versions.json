@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-17T12:03:28.063Z",
+  "lastUpdated": "2025-11-01T00:09:17.459Z",
   "versions": [
     {
       "version": "11400",
@@ -1164,6 +1164,14 @@
     {
       "version": "50500",
       "name": "5.5.0",
+      "variant": "mop_classic",
+      "gameVersionTypeId": 79434,
+      "versionTypeName": "WoW Mists of Pandaria Classic",
+      "versionTypeSlug": "wow-mists-of-pandaria-classic"
+    },
+    {
+      "version": "50503",
+      "name": "5.5.3",
       "variant": "mop_classic",
       "gameVersionTypeId": 79434,
       "versionTypeName": "WoW Mists of Pandaria Classic",
@@ -2359,6 +2367,14 @@
     ],
     "mop_classic": [
       {
+        "version": "50503",
+        "name": "5.5.3",
+        "variant": "mop_classic",
+        "gameVersionTypeId": 79434,
+        "versionTypeName": "WoW Mists of Pandaria Classic",
+        "versionTypeSlug": "wow-mists-of-pandaria-classic"
+      },
+      {
         "version": "50502",
         "name": "5.5.2",
         "variant": "mop_classic",
@@ -2427,7 +2443,7 @@
     "tbc_classic": 4,
     "wotlk_classic": 6,
     "cata_classic": 3,
-    "mop_classic": 3,
+    "mop_classic": 4,
     "retail": 111
   }
 }
