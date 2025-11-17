@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-01T00:01:31.214Z",
+  "lastUpdated": "2025-11-17T12:01:06.416Z",
   "releases": [
     {
       "version": "13924",
@@ -745,6 +745,11 @@
       "version": "12975",
       "originalVersion": "5.5.0",
       "variant": "mop_classic"
+    },
+    {
+      "version": "14282",
+      "originalVersion": "3.80.0",
+      "variant": "unknown"
     }
   ]
 }
