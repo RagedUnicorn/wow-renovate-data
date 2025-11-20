@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-17T12:01:06.416Z",
+  "lastUpdated": "2025-11-20T12:01:13.946Z",
   "releases": [
     {
       "version": "13924",
@@ -660,6 +660,11 @@
       "version": "7349",
       "originalVersion": "1.13.0",
       "variant": "classic_era"
+    },
+    {
+      "version": "14300",
+      "originalVersion": "2.5.5",
+      "variant": "tbc_classic"
     },
     {
       "version": "9049",
