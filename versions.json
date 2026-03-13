@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-12T12:03:05.858Z",
+  "lastUpdated": "2026-03-13T00:10:52.745Z",
   "versions": [
     {
       "version": "110005",
@@ -898,6 +898,14 @@
       "versionTypeSlug": "wow-retail"
     },
     {
+      "version": "120005",
+      "name": "12.0.5",
+      "variant": "retail",
+      "gameVersionTypeId": 517,
+      "versionTypeName": "WoW Retail",
+      "versionTypeSlug": "wow-retail"
+    },
+    {
       "version": "11501",
       "name": "1.15.1",
       "variant": "classic_era",
@@ -1212,6 +1220,14 @@
   ],
   "versionsByVariant": {
     "retail": [
+      {
+        "version": "120005",
+        "name": "12.0.5",
+        "variant": "retail",
+        "gameVersionTypeId": 517,
+        "versionTypeName": "WoW Retail",
+        "versionTypeSlug": "wow-retail"
+      },
       {
         "version": "120001",
         "name": "12.0.1",
@@ -2476,6 +2492,6 @@
     "wotlk_classic": 6,
     "cata_classic": 3,
     "mop_classic": 4,
-    "retail": 112
+    "retail": 113
   }
 }
