@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T00:02:42.665Z",
+  "lastUpdated": "2026-04-09T12:11:41.962Z",
   "releases": [
     {
       "version": "15855",
@@ -760,6 +760,11 @@
       "version": "12975",
       "originalVersion": "5.5.0",
       "variant": "mop_classic"
+    },
+    {
+      "version": "16081",
+      "originalVersion": "3.80.1",
+      "variant": "unknown"
     },
     {
       "version": "14282",
