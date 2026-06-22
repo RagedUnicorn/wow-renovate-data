@@ -16,6 +16,10 @@ class CurseForgeClient {
     this.wowGameId = 1;
     this.userAgent = `${packageInfo.name}/${packageInfo.version}`;
 
+    this.requestTimeout = 30000;
+    this.maxRetries = 3;
+    this.retryBaseDelay = 1000;
+
     // Hardcoded mappings based on known gameVersionTypeIds
     this.versionTypeMap = {
       67408: { id: 67408, name: 'WoW Classic Era', slug: 'wow-classic-era', variant: 'classic_era' },
@@ -28,6 +32,44 @@ class CurseForgeClient {
   }
 
   /**
+   * Performs an HTTP GET with a request timeout and exponential-backoff retries.
+   *
+   * @param {string} url - The URL to request
+   * @param {Object} headers - Request headers
+   * @param {string} label - Human-readable label used in log messages
+   *
+   * @returns {Promise<Object>} The axios response
+   *
+   * @throws {Error} If all retry attempts fail
+   */
+  async requestWithRetry(url, headers, label) {
+    let lastError;
+
+    for (let attempt = 1; attempt <= this.maxRetries; attempt++) {
+      try {
+        return await axios.get(url, { headers, timeout: this.requestTimeout });
+      } catch (error) {
+        lastError = error;
+
+        if (attempt < this.maxRetries) {
+          const delay = this.retryBaseDelay * 2 ** (attempt - 1);
+
+          console.warn(
+            `Error fetching ${label} (attempt ${attempt}/${this.maxRetries}): ${error.message}. ` +
+            `Retrying in ${delay}ms...`
+          );
+
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
+      }
+    }
+
+    console.error(`Error fetching ${label} after ${this.maxRetries} attempts:`, lastError.message);
+
+    throw lastError;
+  }
+
+  /**
    * Fetches game version groups from the CurseForge API.
    *
    * @returns {Promise<Array>} Array of version group objects
@@ -35,24 +77,17 @@ class CurseForgeClient {
    * @throws {Error} If the API request fails
    */
   async getGameVersions() {
-    try {
-      const response = await axios.get(
-        `${this.baseUrl}/games/${this.wowGameId}/versions`,
-        {
-          headers: {
-            'Accept': 'application/json',
-            'x-api-key': this.apiKey,
-            'User-Agent': this.userAgent
-          }
-        }
-      );
+    const response = await this.requestWithRetry(
+      `${this.baseUrl}/games/${this.wowGameId}/versions`,
+      {
+        'Accept': 'application/json',
+        'x-api-key': this.apiKey,
+        'User-Agent': this.userAgent
+      },
+      'game versions'
+    );
 
-      return response.data.data;
-    } catch (error) {
-      console.error('Error fetching game versions:', error.message);
-
-      throw error;
-    }
+    return response.data.data;
   }
 
   /**
@@ -109,23 +144,16 @@ class CurseForgeClient {
    * @throws {Error} If the API request fails
    */
   async getGameVersionIds() {
-    try {
-      const response = await axios.get(
-        `https://wow.curseforge.com/api/game/versions?token=${this.apiKey}`,
-        {
-          headers: {
-            'Accept': 'application/json',
-            'User-Agent': this.userAgent
-          },
-          timeout: 5000
-        }
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching game version IDs:', error.message);
+    const response = await this.requestWithRetry(
+      `https://wow.curseforge.com/api/game/versions?token=${this.apiKey}`,
+      {
+        'Accept': 'application/json',
+        'User-Agent': this.userAgent
+      },
+      'game version IDs'
+    );
 
-      throw error;
-    }
+    return response.data;
   }
 }
 

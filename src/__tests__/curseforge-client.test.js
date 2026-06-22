@@ -10,13 +10,17 @@ describe('CurseForgeClient', () => {
 
   beforeEach(() => {
     client = new CurseForgeClient(mockApiKey);
+    // Avoid real backoff sleeps slowing down the suite
+    client.retryBaseDelay = 0;
     jest.clearAllMocks();
-    // Mock console.error to avoid noise in test output
+    // Mock console.error/warn to avoid noise in test output
     jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
   });
 
   afterEach(() => {
     console.error.mockRestore();
+    console.warn.mockRestore();
   });
 
   describe('constructor', () => {
@@ -87,19 +91,37 @@ describe('CurseForgeClient', () => {
             'Accept': 'application/json',
             'x-api-key': mockApiKey,
             'User-Agent': client.userAgent
-          }
+          },
+          timeout: client.requestTimeout
         }
       );
 
       expect(result).toEqual(mockResponse.data.data);
     });
 
-    it('should throw error when API request fails', async () => {
+    it('should throw error after exhausting retries when API request fails', async () => {
       const mockError = new Error('API Error');
       axios.get.mockRejectedValue(mockError);
 
       await expect(client.getGameVersions()).rejects.toThrow('API Error');
-      expect(console.error).toHaveBeenCalledWith('Error fetching game versions:', 'API Error');
+      expect(axios.get).toHaveBeenCalledTimes(client.maxRetries);
+      expect(console.error).toHaveBeenCalledWith(
+        `Error fetching game versions after ${client.maxRetries} attempts:`,
+        'API Error'
+      );
+    });
+
+    it('should retry and succeed after a transient failure', async () => {
+      const mockResponse = { data: { data: [{ type: 517, versions: ['11.2.0'] }] } };
+      axios.get
+        .mockRejectedValueOnce(new Error('timeout of 30000ms exceeded'))
+        .mockResolvedValueOnce(mockResponse);
+
+      const result = await client.getGameVersions();
+
+      expect(axios.get).toHaveBeenCalledTimes(2);
+      expect(console.warn).toHaveBeenCalledTimes(1);
+      expect(result).toEqual(mockResponse.data.data);
     });
   });
 
@@ -194,27 +216,46 @@ describe('CurseForgeClient', () => {
             'Accept': 'application/json',
             'User-Agent': client.userAgent
           },
-          timeout: 5000
+          timeout: client.requestTimeout
         }
       );
 
       expect(result).toEqual(mockResponse.data);
     });
 
-    it('should throw error when API request fails', async () => {
+    it('should throw error after exhausting retries when API request fails', async () => {
       const mockError = new Error('Network Error');
       axios.get.mockRejectedValue(mockError);
 
       await expect(client.getGameVersionIds()).rejects.toThrow('Network Error');
-      expect(console.error).toHaveBeenCalledWith('Error fetching game version IDs:', 'Network Error');
+      expect(axios.get).toHaveBeenCalledTimes(client.maxRetries);
+      expect(console.error).toHaveBeenCalledWith(
+        `Error fetching game version IDs after ${client.maxRetries} attempts:`,
+        'Network Error'
+      );
     });
 
-    it('should handle timeout errors', async () => {
-      const timeoutError = new Error('timeout of 5000ms exceeded');
+    it('should retry timeout errors and rethrow after exhausting retries', async () => {
+      const timeoutError = new Error('timeout of 30000ms exceeded');
       timeoutError.code = 'ECONNABORTED';
       axios.get.mockRejectedValue(timeoutError);
 
-      await expect(client.getGameVersionIds()).rejects.toThrow('timeout of 5000ms exceeded');
+      await expect(client.getGameVersionIds()).rejects.toThrow('timeout of 30000ms exceeded');
+      expect(axios.get).toHaveBeenCalledTimes(client.maxRetries);
+    });
+
+    it('should retry and succeed after a transient timeout', async () => {
+      const timeoutError = new Error('timeout of 30000ms exceeded');
+      timeoutError.code = 'ECONNABORTED';
+      const mockResponse = { data: [{ id: 13433, name: '11.2.0', gameVersionTypeID: 517 }] };
+      axios.get
+        .mockRejectedValueOnce(timeoutError)
+        .mockResolvedValueOnce(mockResponse);
+
+      const result = await client.getGameVersionIds();
+
+      expect(axios.get).toHaveBeenCalledTimes(2);
+      expect(result).toEqual(mockResponse.data);
     });
   });
 });
