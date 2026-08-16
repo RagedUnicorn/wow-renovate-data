@@ -211,9 +211,19 @@ To automatically update gameVersion IDs when new WoW patches are released, add t
       "datasourceTemplate": "custom.wow-game-versions",
       "depNameTemplate": "wow-gameversion"
     }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["custom.wow-game-versions"],
+      "maxMajorIncrement": 0,
+      "description": "CurseForge game version IDs are opaque IDs, not semver majors - disable the max major increment guard"
+    }
   ]
 }
 ```
+
+> [!IMPORTANT]
+> The `packageRules` entry disabling `maxMajorIncrement` is required. Renovate ships a `maxMajorIncrement` guard (default `500`, introduced December 2025) and applies its default `semver-coerced` versioning to regex custom managers. A gameVersion ID like `14029` is then read as major version 14029, so a bump to e.g. `16630` looks like a jump of 2601 major versions and is **silently skipped** (only visible at DEBUG log level). Without this rule the game-version manager never creates an update PR. The interface and patch version managers are unaffected because their values only increment in small steps.
 
 Then in your `pom.xml`, you can place this comment wherever the gameVersion property is defined:
 
