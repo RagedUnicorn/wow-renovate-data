@@ -1,7 +1,7 @@
 # WoW Renovate Data Source
 
 
-![](./docs/wow_renovate_data.png)
+![](./docs/wow_renovate_data_banner.svg)
 [![Update WoW Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_wow_versions.yml)
 [![Update Game Versions](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/update_game_versions.yml)
 [![Test](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/test.yml/badge.svg)](https://github.com/RagedUnicorn/wow-renovate-data/actions/workflows/test.yml)
