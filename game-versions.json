@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-04T00:04:52.442Z",
+  "lastUpdated": "2026-09-16T22:17:19.751Z",
   "releases": [
     {
       "version": "16984",
@@ -804,6 +804,11 @@
     {
       "version": "14282",
       "originalVersion": "3.80.0",
+      "variant": "unknown"
+    },
+    {
+      "version": "17053",
+      "originalVersion": "1.60.1",
       "variant": "unknown"
     }
   ]
